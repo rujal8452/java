@@ -25,7 +25,7 @@ public class OrderClient {
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpGet getRequest = new HttpGet(SERVICE_URL + "/" + orderId);
 		HttpResponse response = httpClient.execute(getRequest);
-
+// we are putting the request and response
 		if (response.getStatusLine().getStatusCode() != 200) {
 			throw new RuntimeException("Failed : HTTP error code : "
 					+ response.getStatusLine().getStatusCode());
